@@ -1,4 +1,4 @@
-package md.curs.servlets;
+package md.curs.servlets.m21;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
