@@ -22,8 +22,9 @@ public class JspSevlet extends HttpServlet {
         User user = new User("Robert", "Carlson", 54);
         req.setAttribute("user", user);
 
-        // dispatch request to the private.jsp page
+        // initialize dispatcher
         RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/pages/private.jsp");
+        // forward request to jsp view
         dispatcher.forward(req, resp);
     }
 

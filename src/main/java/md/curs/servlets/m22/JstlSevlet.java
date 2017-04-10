@@ -24,6 +24,8 @@ public class JstlSevlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Random r = new Random();
         int minorsCount = 0;
+
+        // Generate 10 users with random ages
         List<User> users = new ArrayList<>();
         for (int i =0; i < 10; i++) {
             User u = new User("Name" + i, "Surname" + i, r.nextInt(50));
@@ -32,6 +34,7 @@ public class JstlSevlet extends HttpServlet {
             }
             users.add(u);
         }
+
         req.setAttribute("users", users);
         req.setAttribute("minorsCount", minorsCount);
 
